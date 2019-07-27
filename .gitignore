@@ -1,5 +1,6 @@
-.idea/
+.DS_Store
 /node_modules/
 /hooks/
 /platforms/
 /plugins/
+/.idea/
