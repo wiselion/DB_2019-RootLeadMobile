@@ -1,19 +1,46 @@
 <div class="page" data-name="settings">
   <div class="navbar">
     <div class="navbar-inner sliding">
-      <div class="title">Settings</div>
+      <div class="title sliding">Настройки</div>
+      <div class="right">
+        <a href="#" class="link icon-only panel-open" data-panel="right">
+          <i class="icon f7-icons ios-only">menu</i>
+          <i class="icon material-icons md-only">menu</i>
+        </a>
+      </div>
     </div>
   </div>
+
   <div class="page-content">
-    <div class="block-title">Form Example</div>
+    <div class="block-title">Настройки пользователя</div>
     <div class="list no-hairlines-md">
       <ul>
         <li>
           <div class="item-content item-input">
             <div class="item-inner">
-              <div class="item-title item-label">Name</div>
+              <div class="item-title item-label">Фамилия</div>
               <div class="item-input-wrap">
-                <input type="text" placeholder="Your name"/>
+                <input type="text" placeholder="Ваша фамилия" value="Иванов"/>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Имя</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="Ваше имя" value="Иван"/>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Отчество</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="Ваше отчество" value="Иванович"/>
               </div>
             </div>
           </div>
@@ -23,7 +50,7 @@
             <div class="item-inner">
               <div class="item-title item-label">E-mail</div>
               <div class="item-input-wrap">
-                <input type="email" placeholder="E-mail"/>
+                <input type="email" placeholder="E-mail" value="i.ivanov@organisation.ru"/>
               </div>
             </div>
           </div>
@@ -31,9 +58,9 @@
         <li>
           <div class="item-content item-input">
             <div class="item-inner">
-              <div class="item-title item-label">URL</div>
+              <div class="item-title item-label">Пароль</div>
               <div class="item-input-wrap">
-                <input type="url" placeholder="URL"/>
+                <input type="password" placeholder="Пароль"/>
               </div>
             </div>
           </div>
@@ -41,9 +68,9 @@
         <li>
           <div class="item-content item-input">
             <div class="item-inner">
-              <div class="item-title item-label">Password</div>
+              <div class="item-title item-label">Телефон</div>
               <div class="item-input-wrap">
-                <input type="password" placeholder="Password"/>
+                <input type="tel" placeholder="Телефон" value="+7 (910) 111-11-11"/>
               </div>
             </div>
           </div>
@@ -51,21 +78,11 @@
         <li>
           <div class="item-content item-input">
             <div class="item-inner">
-              <div class="item-title item-label">Phone</div>
-              <div class="item-input-wrap">
-                <input type="tel" placeholder="Phone"/>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="item-content item-input">
-            <div class="item-inner">
-              <div class="item-title item-label">Gender</div>
+              <div class="item-title item-label">Пол</div>
               <div class="item-input-wrap">
                 <select>
-                  <option>Male</option>
-                  <option>Female</option>
+                  <option>Мужской</option>
+                  <option>Женский</option>
                 </select>
               </div>
             </div>
@@ -74,9 +91,9 @@
         <li>
           <div class="item-content item-input">
             <div class="item-inner">
-              <div class="item-title item-label">Birth date</div>
+              <div class="item-title item-label">Дата рождения</div>
               <div class="item-input-wrap">
-                <input type="date" placeholder="Birth day" value="2014-04-30"/>
+                <input type="date" placeholder="Дата рождения" value="1983-04-30"/>
               </div>
             </div>
           </div>
@@ -84,7 +101,7 @@
         <li>
           <div class="item-content">
             <div class="item-inner">
-              <div class="item-title">Toggle</div>
+              <div class="item-title">Выключить ведомления</div>
               <div class="item-after">
                 <label class="toggle toggle-init">
                   <input type="checkbox">
@@ -94,78 +111,9 @@
             </div>
           </div>
         </li>
-        <li>
-          <div class="item-content item-input">
-            <div class="item-inner">
-              <div class="item-title item-label">Slider</div>
-              <div class="item-input-wrap">
-                <div class="range-slider range-slider-init" data-label="true">
-                  <input type="range" value="50" min="0" max="100" step="1">
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="align-top">
-          <div class="item-content item-input">
-            <div class="item-inner">
-              <div class="item-title item-label">Textarea</div>
-              <div class="item-input-wrap">
-                <textarea placeholder="Bio"></textarea>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="align-top">
-          <div class="item-content item-input">
-            <div class="item-inner">
-              <div class="item-title item-label">Resizable</div>
-              <div class="item-input-wrap">
-                <textarea placeholder="Bio" class="resizable"></textarea>
-              </div>
-            </div>
-          </div>
-        </li>
       </ul>
     </div>
-    <div class="block-title">Buttons</div>
-    <div class="block block-strong">
-      <p class="row">
-        <a href="#" class="col button">Button</a>
-        <a href="#" class="col button button-fill">Fill</a>
-      </p>
-      <p class="row">
-        <a href="#" class="col button button-raised">Raised</a>
-        <a href="#" class="col button button-raised button-fill">Raised Fill</a>
-      </p>
-      <p class="row">
-        <a href="#" class="col button button-round">Round</a>
-        <a href="#" class="col button button-round button-fill">Round Fill</a>
-      </p>
-      <p class="row">
-        <a href="#" class="col button button-outline">Outline</a>
-        <a href="#" class="col button button-round button-outline">Outline Round</a>
-      </p>
-      <p class="row">
-        <a href="#" class="col button button-small button-outline">Small</a>
-        <a href="#" class="col button button-small button-round button-outline">Small Round</a>
-      </p>
-      <p class="row">
-        <a href="#" class="col button button-small button-fill">Small</a>
-        <a href="#" class="col button button-small button-round button-fill">Small Round</a>
-      </p>
-      <p class="row">
-        <a href="#" class="col button button-large button-raised">Large</a>
-        <a href="#" class="col button button-large button-fill button-raised">Large Fill</a>
-      </p>
-
-      <p class="row">
-        <a href="#" class="col button button-large button-fill button-raised color-red">Large Red</a>
-        <a href="#" class="col button button-large button-fill button-raised color-green">Large Green</a>
-      </p>
-
-    </div>
-    <div class="block-title">Checkbox group</div>
+    <div class="block-title">Настройки уведомлений</div>
     <div class="list">
       <ul>
         <li>
@@ -173,16 +121,16 @@
             <input type="checkbox" name="checkbox" value="Books" checked="checked"/>
             <i class="icon icon-checkbox"></i>
             <div class="item-inner">
-              <div class="item-title">Books</div>
+              <div class="item-title">Отчет о выполнении на email</div>
             </div>
           </label>
         </li>
         <li>
           <label class="item-checkbox item-content">
-            <input type="checkbox" name="checkbox" value="Movies"/>
+            <input type="checkbox" name="checkbox" value="Movies" checked="checked"/>
             <i class="icon icon-checkbox"></i>
             <div class="item-inner">
-              <div class="item-title">Movies</div>
+              <div class="item-title">Отчет о выполнении push</div>
             </div>
           </label>
         </li>
@@ -191,7 +139,7 @@
             <input type="checkbox" name="checkbox" value="Food"/>
             <i class="icon icon-checkbox"></i>
             <div class="item-inner">
-              <div class="item-title">Food</div>
+              <div class="item-title">Поступления новых заявок на email</div>
             </div>
           </label>
         </li>
@@ -200,52 +148,17 @@
             <input type="checkbox" name="checkbox" value="Drinks"/>
             <i class="icon icon-checkbox"></i>
             <div class="item-inner">
-              <div class="item-title">Drinks</div>
+              <div class="item-title">Поступления новых заявок push</div>
             </div>
           </label>
         </li>
       </ul>
     </div>
-    <div class="block-title">Radio buttons group</div>
-    <div class="list">
-      <ul>
-        <li>
-          <label class="item-radio item-content">
-            <input type="radio" name="radio" value="Books" checked="checked"/>
-            <i class="icon icon-radio"></i>
-            <div class="item-inner">
-              <div class="item-title">Books</div>
-            </div>
-          </label>
-        </li>
-        <li>
-          <label class="item-radio item-content">
-            <input type="radio" name="radio" value="Movies"/>
-            <i class="icon icon-radio"></i>
-            <div class="item-inner">
-              <div class="item-title">Movies</div>
-            </div>
-          </label>
-        </li>
-        <li>
-          <label class="item-radio item-content">
-            <input type="radio" name="radio" value="Food"/>
-            <i class="icon icon-radio"></i>
-            <div class="item-inner">
-              <div class="item-title">Food</div>
-            </div>
-          </label>
-        </li>
-        <li>
-          <label class="item-radio item-content">
-            <input type="radio" name="radio" value="Drinks"/>
-            <i class="icon icon-radio"></i>
-            <div class="item-inner">
-              <div class="item-title">Drinks</div>
-            </div>
-          </label>
-        </li>
-      </ul>
+    <div class="block block-strong">
+      <p class="row">
+        <a href="#" class="col button button-large button-fill button-raised color-green">Сохранить</a>
+      </p>
+
     </div>
   </div>
 </div>
