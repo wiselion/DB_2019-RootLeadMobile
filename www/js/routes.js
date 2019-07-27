@@ -8,6 +8,11 @@ routes = [
     path: '/order/:id/',
     componentUrl: './pages/order.html',
   },
+  // новая заявка
+  {
+    path: '/neworder/',
+    componentUrl: './pages/new-order.html',
+  },
     /*{
     path: '/',
     url: './index.html',

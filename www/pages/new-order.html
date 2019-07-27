@@ -1,0 +1,100 @@
+<template>
+<div class="page" data-name="home">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+      <div class="title sliding">Новая заявка</div>
+      <div class="right">
+        <a href="#" class="link icon-only panel-open" data-panel="right">
+          <i class="icon f7-icons ios-only">menu</i>
+          <i class="icon material-icons md-only">menu</i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="block-title">Шаблон задачи</div>
+    <div class="list no-hairlines-md">
+      <ul>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-input-wrap">
+                <input type="text" placeholder="Выберите шаблон" readonly="readonly" id="picker-template"/>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="block-title">Настройки уведомлений</div>
+    <div class="list">
+      <ul>
+        <li>
+          <label class="item-checkbox item-content">
+            <input type="checkbox" name="checkbox" value="Books" checked="checked"/>
+            <i class="icon icon-checkbox"></i>
+            <div class="item-inner">
+              <div class="item-title">Отчет о выполнении на email</div>
+            </div>
+          </label>
+        </li>
+        <li>
+          <label class="item-checkbox item-content">
+            <input type="checkbox" name="checkbox" value="Movies" checked="checked"/>
+            <i class="icon icon-checkbox"></i>
+            <div class="item-inner">
+              <div class="item-title">Отчет о выполнении push</div>
+            </div>
+          </label>
+        </li>
+      </ul>
+    </div>
+    <div class="block block-strong">
+      <p class="row">
+        <a href="#" @click="startTask()" class="col button button-large button-fill button-raised color-green">Запустить</a>
+      </p>
+
+    </div>
+  </div>
+</div>
+</template>
+<script>
+  return {
+    /*data() {
+      return {
+        orders: []
+      }
+    },*/
+    on: {
+      pageInit() {
+        var self = this;
+        var tmpls = [];
+        g_templates.forEach(function(tmpl){
+          tmpls.push(tmpl.name);
+        });
+        var pickerDevice = app.picker.create({
+          inputEl: '#picker-template',
+          cols: [
+            {
+              textAlign: 'center',
+              values: tmpls
+            }
+          ]
+        });
+      },
+    },
+    methods: {
+      startTask() {
+        app.dialog.alert('Задача запущена!');
+        app.views.main.router.navigate('/');
+      }
+    }
+  };
+</script>

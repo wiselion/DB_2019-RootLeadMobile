@@ -8,13 +8,16 @@
             <span class="ios-only">Back</span>
           </a>
         </div>
-        <div class="title">{{order.name}}</div>
+        <div class="title">Задача {{order.id}}</div>
       </div>
     </div>
     <div class="page-content">
-      <div class="block-title">About {{order.name}}</div>
+      <div class="block-title">Задача {{order.name}}</div>
       <div class="block block-strong">
-        Описание шаблона ...
+        <p><strong>Задача</strong>: {{order.id}}</p>
+        <p><strong>Шаблон</strong>: {{order.type}}</p>
+        <p><strong>Дата</strong>: {{order.date}}</p>
+        <p><strong>Статус</strong>: {{#js_if 'this.order.status==0'}}Новая{{/js_if}}{{#js_if 'this.order.status==1'}}В процессе{{/js_if}}{{#js_if 'this.order.status==2'}}Выполнена{{/js_if}}</p>
       </div>
     </div>
   </div>
