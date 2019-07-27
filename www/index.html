@@ -28,32 +28,24 @@
   <div id="app">
     <!-- Status bar overlay for fullscreen mode-->
     <div class="statusbar"></div>
-    <!-- Left panel with cover effect-->
-    <div class="panel panel-left panel-cover theme-dark">
-      <div class="view">
-        <div class="page">
-          <div class="navbar">
-            <div class="navbar-inner">
-              <div class="title">Left Panel</div>
-            </div>
-          </div>
-          <div class="page-content">
-            <div class="block">Left panel content goes here</div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Right panel with reveal effect-->
     <div class="panel panel-right panel-reveal theme-dark">
       <div class="view">
         <div class="page">
           <div class="navbar">
             <div class="navbar-inner">
-              <div class="title">Right Panel</div>
+              <div class="title">Меню пользователя</div>
             </div>
           </div>
           <div class="page-content">
-            <div class="block">Right panel content goes here</div>
+            <div class="list links-list">
+              <ul>
+                <li><a href="#">Заявки</a></li>
+                <li><a href="#">Шаблоны</a></li>
+                <li><a href="#">Настройки</a></li>
+                <li><a href="/about/">О приложении</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -68,19 +60,19 @@
             <i class="icon f7-icons ios-only">home</i>
             <i class="icon f7-icons ios-only icon-ios-fill">home_fill</i>
             <i class="icon material-icons md-only">home</i>
-            <span class="tabbar-label">Home</span>
+            <span class="tabbar-label">Заявки</span>
           </a>
           <a href="#view-catalog" class="tab-link">
             <i class="icon f7-icons ios-only">list</i>
             <i class="icon f7-icons ios-only icon-ios-fill">list_fill</i>
             <i class="icon material-icons md-only">view_list</i>
-            <span class="tabbar-label">Catalog</span>
+            <span class="tabbar-label">Шаблоны</span>
           </a>
           <a href="#view-settings" class="tab-link">
             <i class="icon f7-icons ios-only">settings</i>
             <i class="icon f7-icons ios-only icon-ios-fill">settings_fill</i>
             <i class="icon material-icons md-only">settings</i>
-            <span class="tabbar-label">Settings</span>
+            <span class="tabbar-label">Настройки</span>
           </a>
         </div>
       </div>
@@ -91,13 +83,7 @@
           <!-- Top Navbar -->
           <div class="navbar">
             <div class="navbar-inner">
-              <div class="left">
-                <a href="#" class="link icon-only panel-open" data-panel="left">
-                  <i class="icon f7-icons ios-only">menu</i>
-                  <i class="icon material-icons md-only">menu</i>
-                </a>
-              </div>
-              <div class="title sliding">Home</div>
+              <div class="title sliding">Главная</div>
               <div class="right">
                 <a href="#" class="link icon-only panel-open" data-panel="right">
                   <i class="icon f7-icons ios-only">menu</i>
