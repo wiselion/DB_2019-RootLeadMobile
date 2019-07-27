@@ -1,5 +1,5 @@
 <template>
-  <div class="page" data-name="catalog">
+  <div class="page" data-name="home">
     <div class="navbar">
       <div class="navbar-inner sliding">
         <div class="left">
@@ -8,13 +8,13 @@
             <span class="ios-only">Back</span>
           </a>
         </div>
-        <div class="title">{{product.title}}</div>
+        <div class="title">{{order.name}}</div>
       </div>
     </div>
     <div class="page-content">
-      <div class="block-title">About {{product.title}}</div>
+      <div class="block-title">About {{order.name}}</div>
       <div class="block block-strong">
-        {{product.description}}
+        Описание шаблона ...
       </div>
     </div>
   </div>
@@ -22,15 +22,17 @@
 <script>
   return {
     data: function () {
-      var productId = this.$route.params.id;
-      var currentProduct;
-      this.$root.products.forEach(function (product) {
-        if (product.id === productId) {
-          currentProduct = product;
+      var orderId = this.$route.params.id;
+      var currentOrder;
+      //console.log(g_orders);
+      g_orders.forEach(function (tmpl) {
+        //console.log(tmpl);
+        if (tmpl.id == orderId) {
+          currentOrder = tmpl;
         }
       });
       return {
-        product: currentProduct,
+        order: currentOrder,
       };
     }
   };

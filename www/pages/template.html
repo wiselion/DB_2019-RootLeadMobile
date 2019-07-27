@@ -1,0 +1,39 @@
+<template>
+  <div class="page" data-name="templates">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div>
+        <div class="title">{{template.name}}</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block-title">About {{template.name}}</div>
+      <div class="block block-strong">
+        Описание шаблона ...
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    data: function () {
+      var templateId = this.$route.params.id;
+      var currentTemplate;
+      //console.log(g_templates);
+      g_templates.forEach(function (tmpl) {
+        //console.log(tmpl);
+        if (tmpl.id == templateId) {
+          currentTemplate = tmpl;
+        }
+      });
+      return {
+        template: currentTemplate,
+      };
+    }
+  };
+</script>
