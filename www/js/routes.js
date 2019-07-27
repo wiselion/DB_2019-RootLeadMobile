@@ -1,12 +1,19 @@
 routes = [
+  // главная с заявками
   {
     path: '/',
-    url: './index.html',
+    componentUrl: './pages/orders.html',
   },
+    /*{
+    path: '/',
+    url: './index.html',
+  },*/
+  // страница о приложении
   {
     path: '/about/',
     url: './pages/about.html',
   },
+  // шаблоны
   {
     path: '/catalog/',
     componentUrl: './pages/catalog.html',
@@ -15,12 +22,29 @@ routes = [
     path: '/product/:id/',
     componentUrl: './pages/product.html',
   },
+  // настройки пользователя
   {
     path: '/settings/',
     url: './pages/settings.html',
   },
-  // Page Loaders & Router
+  // выход из приложения
   {
+    path: '/logout/',
+    async: function (routeTo, routeFrom, resolve, reject) {
+      app.request.json(app_prms.url.logout,(data) => {
+            console.log('start logout');
+          },
+          (xhr, status) => {
+            if(status==401 || status==403) {
+              clearToken();
+              SetNotAuth();
+            } else app.dialog.alert(lang.login.disconnect);
+          },'json');
+    }
+  },
+
+  // Page Loaders & Router
+    /*  {
     path: '/page-loader-template7/:user/:userId/:posts/:postId/',
     templateUrl: './pages/page-loader-template7.html',
   },
@@ -77,7 +101,7 @@ routes = [
         );
       }, 1000);
     },
-  },
+  },*/
   // Default route (404 page). MUST BE THE LAST
   {
     path: '(.*)',
