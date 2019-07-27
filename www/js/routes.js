@@ -4,6 +4,10 @@ routes = [
     path: '/',
     componentUrl: './pages/orders.html',
   },
+  {
+    path: '/order/:id/',
+    componentUrl: './pages/order.html',
+  },
     /*{
     path: '/',
     url: './index.html',
@@ -15,12 +19,12 @@ routes = [
   },
   // шаблоны
   {
-    path: '/catalog/',
-    componentUrl: './pages/catalog.html',
+    path: '/templates/',
+    componentUrl: './pages/templates.html',
   },
   {
-    path: '/product/:id/',
-    componentUrl: './pages/product.html',
+    path: '/template/:id/',
+    componentUrl: './pages/template.html',
   },
   // настройки пользователя
   {

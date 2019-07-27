@@ -1,8 +1,8 @@
 <template>
-  <div class="page" data-name="orders">
+  <div class="page" data-name="templates">
     <div class="navbar">
       <div class="navbar-inner sliding">
-        <div class="title sliding">Заявки</div>
+        <div class="title sliding">Шаблоны</div>
         <div class="right">
           <a href="#" class="link icon-only panel-open" data-panel="right">
             <i class="icon f7-icons ios-only">menu</i>
@@ -21,7 +21,7 @@
 
       <div class="list">
         <ul>
-          {{#each orders}}
+          {{#each templates}}
           <li>
             <a href="/order/{{id}}/" class="item-link item-content">
               <div class="item-media"><img src="images/status-{{status}}.svg"></div>
@@ -44,22 +44,22 @@
   return {
     data() {
       return {
-        orders: []
+        templates: []
       }
     },
     on: {
       pageInit() {
         var self = this;
-        LoadOrders({func_after:function(){
-          self.$setState({orders: g_orders});
-        }});
+        LoadTemplates({func_after:function(){
+            self.$setState({orders: g_templates});
+          }});
         $$('.ptr-content').on('ptr:refresh', function (e) {
-          LoadOrders({
+          LoadTemplates({
             func_before:function(){
               app.ptr.done();
             },
             func_after:function(){
-              self.$setState({orders: g_orders});
+              self.$setState({templates: g_templates});
             }
           });
         });
