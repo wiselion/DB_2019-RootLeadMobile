@@ -33,6 +33,20 @@
         </li>
       </ul>
     </div>
+    <div class="block-title showafterselect">Загрузка информации</div>
+    <div class="list no-hairlines-md showafterselect">
+      <ul>
+        <li>
+          <div class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-input-wrap">
+                <input type="file" placeholder="Выберите XLS файл"/>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
     <div class="block-title">Настройки уведомлений</div>
     <div class="list">
       <ul>
@@ -74,6 +88,7 @@
     },*/
     on: {
       pageInit() {
+        $$('.showafterselect').hide();
         var self = this;
         var tmpls = [];
         g_templates.forEach(function(tmpl){
@@ -88,11 +103,22 @@
             }
           ]
         });
+        $$('#picker-template').on('change',function(){
+          $$('.showafterselect').show();
+        });
       },
     },
     methods: {
       startTask() {
         app.dialog.alert('Задача запущена!');
+        let tt = new Date();
+        gg_orders.unshift({
+          id: gg_orders.length+1,
+          date: tt.toLocaleDateString()+' '+tt.toLocaleTimeString(),
+          type: $$('#picker-template').val(),
+          status: 0,
+        });
+        console.log();
         app.views.main.router.navigate('/');
       }
     }
