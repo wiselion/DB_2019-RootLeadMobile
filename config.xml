@@ -16,8 +16,20 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+
+    <splash src="www/res/splash/drawable-ldpi-icon.png" platform="android" qualifier="ldpi" />
+    <splash src="www/res/splash/drawable-mdpi-icon.png" platform="android" qualifier="mdpi" />
+    <splash src="www/res/splash/drawable-hdpi-icon.png" platform="android" qualifier="hdpi" />
+    <splash src="www/res/splash/drawable-xhdpi-icon.png" platform="android" qualifier="xhdpi" />
+
     <platform name="android">
         <allow-intent href="market:*" />
+        <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
+        <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
+        <icon density="hdpi" src="www/res/icon/android/drawable-hdpi-icon.png" />
+        <icon density="xhdpi" src="www/res/icon/android/drawable-xhdpi-icon.png" />
+        <icon density="xxhdpi" src="www/res/icon/android/drawable-xxhdpi-icon.png" />
+        <icon density="xxxhdpi" src="www/res/icon/android/drawable-xxxhdpi-icon.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
